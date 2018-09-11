@@ -10,4 +10,4 @@ addons:
     - curl
     - wget
 script:
-- exit 1
+- exit 0
