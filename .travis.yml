@@ -9,5 +9,9 @@ addons:
     - nginx
     - curl
     - wget
+install:
+- bash -x scripts/install_nginx.sh
+before_script:
+- echo before script
 script:
-- exit 0
+- bash -x test.sh
