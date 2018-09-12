@@ -15,3 +15,13 @@ before_script:
 - echo before script
 script:
 - bash -x test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: f1k+OeVfMN9G+AM86PKWepbYe25OnZpeL8wRO8PgPtw+oF+ijrqCxzsPb2hrmRfcR5B3/QB5BF1pPwHdlfQzlDYZCUftuxcjuNGyQH3jEHrsafWWlHoxTNBy93Ay82gUcOmIlDKBvRUm4Ln6z9Ju3IDwx1hhv7k1kpFoc+BFOqKWO9nOFvFnsNGNjihCsN9YtPdXcelEMqrmF+34XPpg0o6FDWh9l7gXt0eXeETe/T3KWfXEtXR+KjZiA+EpQstZtbv7/SJeXtxyO/VMLpftt5UmlTnaUnYoK9YXS0z9nRPKRMVxSCxWYYJokF64uxa4F+sb+UTC4+VbkNdSTklZo9rsuJpTfe85gMCwxdw03KmM6WY0LiNfQs+9I0kgRLCtRj+kUzBosotVTv8W1BgdpbDrXyzRCVLzB49xWoSiYOK9WEU9492EvlwwozGf01Cz0n0UC6WLy0q+vJRNzI392g+vYVQP830V61vCXcfl0ONhMDTkdUhfgY63QfAionH7ZMtChBr3N8uMq1JTtH1nwke991MIGpZPtaZJ49P5+81QlQiR9r+wuHMLYxhIA/itEcVIfTzQM6ipS6dLr3ObcgcAGGjFlXmdktGVicbNnVsOzygteYDM0iiB6nm9iTxL7GzMZ/eO7iRX0JjVHvtQgeb/e49P/hGJLj9e6F4CUdI=
+  file: index.html
+  skip_cleanup: true
+  on:
+    repo: firedot/myweb1
+  on:
+    tags: true
