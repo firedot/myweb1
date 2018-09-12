@@ -10,9 +10,9 @@ which ${PKG}  || {
 [ -d /vagrant ] && pushd /vagrant
 
 #use our conf file
-[ -f /etc/nginx/sites-enabled/default ] && rm /etc/nginx/sites-enabled/default
-cp nginx.conf /etc/nginx/sites-enabled/default
+[ -f /etc/nginx/sites-enabled/default ] && sudo rm /etc/nginx/sites-enabled/default
+sudo cp nginx.conf /etc/nginx/sites-enabled/default
 service nginx restart
 
 #deploy our webpage
-cp index.html /var/www/html/
+sudo cp index.html /var/www/html/
